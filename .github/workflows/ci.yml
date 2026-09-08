@@ -23,13 +23,11 @@ jobs:
           php-version: '8.2'
 
       - name: Check PHP version
-        run: php -v
+        run: php --version
 
-      - name: Check PHP syntax
-        run: php -l index.php
+      - name: Validate PHP files
+        run: |
+          php -l index.php
 
-      - name: Show project files
-        run: ls -la
-
-      - name: Run application check
-        run: echo "Hello CI/CD - Pipeline is working!"
+      - name: Run application
+        run: php index.php
