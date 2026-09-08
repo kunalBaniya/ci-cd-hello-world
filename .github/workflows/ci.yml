@@ -27,3 +27,9 @@ jobs:
 
       - name: Check PHP syntax
         run: php -l index.php
+
+      - name: Show project files
+        run: ls -la
+
+      - name: Run application check
+        run: echo "Hello CI/CD - Pipeline is working!"
